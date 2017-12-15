@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-service_main" target="1.8" />
+      <module name="auth-service_test" target="1.8" />
+      <module name="composite-service_main" target="1.8" />
+      <module name="composite-service_test" target="1.8" />
+      <module name="disc-service_main" target="1.8" />
+      <module name="disc-service_test" target="1.8" />
+      <module name="discovery-service_main" target="1.8" />
+      <module name="discovery-service_test" target="1.8" />
+      <module name="discovety-service_main" target="1.8" />
+      <module name="discovety-service_test" target="1.8" />
+      <module name="eureka-service_main" target="1.8" />
+      <module name="eureka-service_test" target="1.8" />
+      <module name="eureka_main" target="1.8" />
+      <module name="eureka_test" target="1.8" />
+      <module name="phonebook_main" target="1.8" />
+      <module name="phonebook_test" target="1.8" />
+      <module name="user-service_main" target="1.8" />
+      <module name="user-service_test" target="1.8" />
+      <module name="web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,16 @@
+rootProject.name = 'phonebook'
+include 'composite-service'
+include 'auth-service'/*
+include 'discovety-service'
+include 'discovery-service'
+include 'discovery'
+include 'eureka-service'
+include 'discovery-service'
+include 'eureka'
+include 'discovery-service'
+include 'eureka-service'
+include 'disc-service'
+include 'discovery-service'
+*/
+include 'user-service'
+
