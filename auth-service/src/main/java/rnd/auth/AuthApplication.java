@@ -3,7 +3,13 @@ package rnd.auth;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import rnd.auth.entity.User;
 
+import java.security.Principal;
+
+@RestController
 @SpringBootApplication
 @EnableResourceServer
 public class AuthApplication{

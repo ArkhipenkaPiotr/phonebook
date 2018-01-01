@@ -2,25 +2,36 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service.iml" group="auth-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addresses-service.iml" filepath="$PROJECT_DIR$/.idea/modules/addresses-service.iml" group="addresses-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addresses-service/addresses-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addresses-service/addresses-service_main.iml" group="addresses-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addresses-service/addresses-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addresses-service/addresses-service_test.iml" group="addresses-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/auth-service.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/auth-service.iml" group="auth-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/auth-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/auth-service_main.iml" group="auth-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/auth-service/auth-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/auth-service/auth-service_test.iml" group="auth-service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite-service.iml" filepath="$PROJECT_DIR$/.idea/modules/composite-service.iml" group="composite-service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite-service/composite-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/composite-service/composite-service_main.iml" group="composite-service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite-service/composite-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/composite-service/composite-service_test.iml" group="composite-service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/disc-service/disc-service.iml" filepath="$PROJECT_DIR$/.idea/modules/disc-service/disc-service.iml" group="disc-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composite-service/composite-service.iml" filepath="$PROJECT_DIR$/.idea/modules/composite-service/composite-service.iml" group="composite-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service.iml" group="discovery-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service/discovery-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service/discovery-service_main.iml" group="discovery-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service/discovery-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service/discovery-service_test.iml" group="discovery-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovety-service/discovety-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/discovety-service/discovety-service_main.iml" group="discovety-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovety-service/discovety-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/discovety-service/discovety-service_test.iml" group="discovety-service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-service/eureka-service.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-service/eureka-service.iml" group="eureka-service" />
       <module fileurl="file://$PROJECT_DIR$/discovery-service/src/main/main.iml" filepath="$PROJECT_DIR$/discovery-service/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nm/nm.iml" filepath="$PROJECT_DIR$/.idea/modules/nm/nm.iml" group="nm" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/phonebook.iml" filepath="$PROJECT_DIR$/.idea/modules/phonebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service/phonebook-discovery-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service/phonebook-discovery-service_main.iml" group="discovery-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/discovery-service/phonebook-discovery-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/discovery-service/phonebook-discovery-service_test.iml" group="discovery-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/phonebook_main.iml" filepath="$PROJECT_DIR$/.idea/modules/phonebook_main.iml" group="phonebook" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/phonebook_test.iml" filepath="$PROJECT_DIR$/.idea/modules/phonebook_test.iml" group="phonebook" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.iml" group="user-service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service/user-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service/user-service_main.iml" group="user-service" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service/user-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service/user-service_test.iml" group="user-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/projects-service.iml" filepath="$PROJECT_DIR$/.idea/modules/projects-service.iml" group="projects-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/projects-service/projects-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/projects-service/projects-service_main.iml" group="projects-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/projects-service/projects-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/projects-service/projects-service_test.iml" group="projects-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/staff-service.iml" filepath="$PROJECT_DIR$/.idea/modules/staff-service.iml" group="staff-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/staff-service/staff-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/staff-service/staff-service_main.iml" group="staff-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/staff-service/staff-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/staff-service/staff-service_test.iml" group="staff-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service/user-service.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service/user-service.iml" group="user-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul/zuul.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul/zuul.iml" group="zuul" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-service.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-service.iml" group="zuul-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-service/zuul-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-service/zuul-service_main.iml" group="zuul-service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul-service/zuul-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul-service/zuul-service_test.iml" group="zuul-service" />
     </modules>
   </component>
 </project>
