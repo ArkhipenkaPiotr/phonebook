@@ -21,12 +21,6 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    @CrossOrigin
-    @RequestMapping(value = "/users", method = RequestMethod.POST)
-    public User saveUser(@RequestBody User user) {
-        return userService.saveUser(user);
-    }
-
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     @ResponseBody
     public Principal user(Principal user) {
@@ -34,9 +28,16 @@ public class UserController {
         return user;
     }
 
+    @CrossOrigin
+    @RequestMapping(value = "/user",params = {"login", "password"},method = RequestMethod.GET)
+    @ResponseBody
+    public User user(@RequestParam("login") String login, @RequestParam("password") String password){
+        return userService.loadUserByUsernameAndPassword(login,password);
+    }
 
+    @CrossOrigin
     @RequestMapping(value = "/users", method = RequestMethod.GET)
-    public List<User> saveUser() {
+    public List<User> getusers(){
         return userRepository.findAll();
     }
 }

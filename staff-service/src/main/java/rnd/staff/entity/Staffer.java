@@ -2,6 +2,7 @@ package rnd.staff.entity;
 
 import javax.persistence.*;
 import java.time.OffsetDateTime;
+import java.util.List;
 
 @Entity
 public class Staffer {
@@ -19,7 +20,46 @@ public class Staffer {
     @Column(nullable = false)
     private String position;
 
+    private String photoUrl;
+
     private String country;
+
+    private OffsetDateTime dateOfBirth;
+
+    @Column(nullable = false, unique = true)
+    private Long address_id;
+
+    public Long getAddress_id() {
+        return address_id;
+    }
+
+    public void setAddress_id(Long address_id) {
+        this.address_id = address_id;
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+//    public List<Project> getProjects() {
+//        return projects;
+//    }
+//
+//    public void setProjects(List<Project> projects) {
+//        this.projects = projects;
+//    }
+//
+//    public Address getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
 
     public String getCountry() {
         return country;
@@ -28,8 +68,6 @@ public class Staffer {
     public void setCountry(String country) {
         this.country = country;
     }
-
-    private OffsetDateTime dateOfBirth;
 
     public Long getId() {
         return id;
@@ -71,3 +109,4 @@ public class Staffer {
         this.dateOfBirth = dateOfBirth;
     }
 }
+

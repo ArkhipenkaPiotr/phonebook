@@ -1,5 +1,6 @@
 package rnd.auth.entity;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -20,15 +21,62 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private boolean enabled;
 
     @Column(nullable = false)
     private String role;
 
+    @Column(nullable = false, unique = true)
+    private Long stafferId;
+
+    public Long getStafferId() {
+        return stafferId;
+    }
+
+    public void setStafferId(Long stafferId) {
+        this.stafferId = stafferId;
+    }
+
+    //    @OneToOne(cascade = CascadeType.ALL)
+//    @JsonIgnore
+//    private Staffer staffer;
+
+//    public Staffer getStaffer() {
+//        return staffer;
+//    }
+//
+//    public void setStaffer(Staffer staffer) {
+//        this.staffer = staffer;
+//    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return new ArrayList<GrantedAuthority>();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public void setPassword(String password) {

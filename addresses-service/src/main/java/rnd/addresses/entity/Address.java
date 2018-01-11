@@ -8,19 +8,19 @@ import javax.persistence.Id;
 public class Address {
 
     @Id
-    private Long userId;
+    private Long id;
 
     private String eMail;
     private String skype;
     private String phone;
     private Integer room;
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String geteMail() {

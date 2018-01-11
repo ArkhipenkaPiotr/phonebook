@@ -20,7 +20,7 @@ public class AddressService {
 
     @Async
     public Address findAddressById(long id){
-        return repository.findAddressByUserId(id);
+        return repository.findOne(id);
     }
 
     @Async

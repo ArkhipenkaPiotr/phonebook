@@ -21,9 +21,9 @@ public class UserService implements UserDetailsService {
         return userRepository.findUserByUsername(username);
     }
 
-    public User saveUser(User user){
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        user.setPassword(encoder.encode(user.getPassword()));
-        return userRepository.save(user);
+    public User loadUserByUsernameAndPassword(String username, String password){
+        User user = userRepository.findUserByUsername(username);
+        user.setPassword(password);
+        return user;
     }
 }
