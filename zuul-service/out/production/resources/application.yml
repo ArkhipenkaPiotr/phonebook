@@ -1,0 +1,25 @@
+info:
+  component: Zuul Server
+
+zuul:
+  routes:
+    staff-service:
+      path: /staff/**
+    addresses-service:
+      path: /address/**
+    projects-service:
+      path: /project/**
+
+server:
+  port: 8765
+
+
+security:
+  oauth2:
+#    client:
+#       accessTokenUri: http://localhost:9999/uaa/oauth/token
+#       userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+#       clientId: acme
+#       clientSecret: acmesecret
+    resource:
+        userInfoUri: http://localhost:9999/uaa/user
