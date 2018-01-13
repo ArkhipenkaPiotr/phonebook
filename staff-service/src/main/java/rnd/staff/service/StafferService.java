@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import rnd.staff.entity.Staffer;
 import rnd.staff.repository.StafferRepository;
 
+import java.time.OffsetDateTime;
 import java.util.List;
 
 @Service
@@ -17,10 +18,12 @@ public class StafferService {
     }
 
     public Staffer getStafferById (Long id){
-        return stafferRepository.findOne(id);
+        Staffer staffer = stafferRepository.findOne(id);
+        return staffer;
     }
 
     public Staffer saveStaffer(Staffer staffer){
+        staffer.setDateOfBirth(OffsetDateTime.now());
         return stafferRepository.save(staffer);
     }
 

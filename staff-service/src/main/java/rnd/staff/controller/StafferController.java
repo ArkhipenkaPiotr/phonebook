@@ -21,7 +21,7 @@ public class StafferController {
     @Autowired
     ImageRepository imageRepository;
 
-    @CrossOrigin
+    @CrossOrigin(origins = "*")
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     private ResponseEntity<List<Staffer>> getAllStaffers(){
         return new ResponseEntity<>(stafferService.getAllStaffers(), HttpStatus.OK);

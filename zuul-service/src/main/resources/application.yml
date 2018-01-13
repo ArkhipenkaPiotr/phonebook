@@ -9,6 +9,8 @@ zuul:
       path: /address/**
     projects-service:
       path: /project/**
+    news-service:
+      path: /news/**
 
 server:
   port: 8765

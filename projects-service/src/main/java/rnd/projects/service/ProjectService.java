@@ -30,27 +30,24 @@ public class ProjectService {
         return projects;
     }
 
-    public List<Project> saveAllProjectsOfUser(List<Project> projects, Long userId){
-        List<ProjectUserLink> links = new ArrayList<>();
-        List<Project> savedProjects = projectRepository.save(projects);
-
-        for (Project project:savedProjects){
-            ProjectUserLink projectUserLink = new ProjectUserLink();
-            projectUserLink.setProjectId(project.getId());
-            projectUserLink.setUserId(userId);
-            links.add(projectUserLink);
+    public Project saveProjectOfUser(String projectName, Long userId){
+        Project savedProject = projectRepository.findByName(projectName);
+        if (savedProject==null){
+            Project project = new Project();
+            project.setName(projectName);
+            savedProject = projectRepository.save(project);
         }
+        ProjectUserLink projectUserLink = new ProjectUserLink();
+        projectUserLink.setUserId(userId);
+        projectUserLink.setProjectId(savedProject.getId());
+        projectUserLinkRepository.save(projectUserLink);
 
-        return savedProjects;
+        return savedProject;
     }
 
     //Есть ли у админа возможность удаления проекта? В ТЗ об этом ничего
-    public void deleteProject(Long projectId){
-        projectRepository.delete(projectId);
-        projectUserLinkRepository.deleteAllByProjectId(projectId);
-    }
-
-    public void deleteUsersLinks(Long userId){
-        projectUserLinkRepository.deleteAllByUserId(userId);
+    public void deleteProject(Long projectId, Long userId){
+        List<ProjectUserLink> projectUserLinks = projectUserLinkRepository.findByUserIdAndProjectId(userId, projectId);
+        projectUserLinkRepository.delete(projectUserLinks);
     }
 }

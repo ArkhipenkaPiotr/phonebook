@@ -15,20 +15,22 @@ public class ProjectController {
     @Autowired
     ProjectService projectService;
 
-    @RequestMapping(value = "/users/{id}/projects", method = RequestMethod.GET)
-    private ResponseEntity<List<Project>> getAllProjectsOfUser(@PathVariable("id") Long userId){
-        return new ResponseEntity<>(projectService.getAllProjectsOfUser(userId), HttpStatus.OK);
+    @CrossOrigin
+    @RequestMapping(value = "/projects", method = RequestMethod.GET)
+    private ResponseEntity<List<Project>> getAllProjectsOfUser(@RequestParam("stafferId") Long stafferId){
+        return new ResponseEntity<>(projectService.getAllProjectsOfUser(stafferId), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/users/{id}/projects", method = RequestMethod.POST)
-    private ResponseEntity<List<Project>> saveAllProjectsOfUser(@PathVariable("id") Long userId, @RequestBody List<Project> projects){
-        return new ResponseEntity<>(projectService.saveAllProjectsOfUser(projects,userId),HttpStatus.OK);
+    @CrossOrigin
+    @RequestMapping(value = "/projects", method = RequestMethod.POST)
+    private ResponseEntity<Project> saveProjectsOfUser(@RequestParam("stafferId") Long stafferId, @RequestParam("projectName") String projectName){
+        return new ResponseEntity<>(projectService.saveProjectOfUser(projectName,stafferId),HttpStatus.OK);
     }
 
-    //Если уже есть такой метод в другом модуле, вызовутся ли оба метода по одному этому урлу?
-    @RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
-    private ResponseEntity<Void> deleteAllLinksIfUser(@PathVariable("id") Long userId){
-        projectService.deleteUsersLinks(userId);
+    @CrossOrigin
+    @RequestMapping(value = "/projects", method = RequestMethod.DELETE)
+    private ResponseEntity<Void> deleteProject(@RequestParam("projectId") Long projectId, @RequestParam("stafferId") Long stafferId){
+        projectService.deleteProject(projectId, stafferId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

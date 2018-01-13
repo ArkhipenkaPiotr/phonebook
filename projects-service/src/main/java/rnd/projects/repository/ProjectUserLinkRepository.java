@@ -9,5 +9,5 @@ public interface ProjectUserLinkRepository extends JpaRepository<ProjectUserLink
 
     List<ProjectUserLink> findAllByUserId (Long id);
     void deleteAllByProjectId(Long id);
-    void deleteAllByUserId(Long id);
+    List<ProjectUserLink> findByUserIdAndProjectId (Long userId, Long projectId);
 }
