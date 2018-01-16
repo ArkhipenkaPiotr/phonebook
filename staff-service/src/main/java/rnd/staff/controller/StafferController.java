@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import rnd.staff.entity.Image;
 import rnd.staff.entity.Staffer;
 import rnd.staff.repository.ImageRepository;
 import rnd.staff.service.StafferService;
@@ -41,7 +42,13 @@ public class StafferController {
     @RequestMapping(value = "/images/{url}",method = RequestMethod.GET, produces = MediaType.IMAGE_JPEG_VALUE)
     @ResponseBody
     private byte[] getImage(@PathVariable("url") String url){
-        return imageRepository.findOneByUrl(url).getPhoto();
+        return stafferService.findPhotoByUrl(url);
+    }
+
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/images", method = RequestMethod.POST)
+    private ResponseEntity<Image> post(@RequestBody Image image){
+        return new ResponseEntity<>(new Image(),HttpStatus.OK);
     }
 
     @RequestMapping(value = "/users/{id}",method = RequestMethod.DELETE)

@@ -2,7 +2,9 @@ package rnd.staff.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import rnd.staff.entity.Image;
 import rnd.staff.entity.Staffer;
+import rnd.staff.repository.ImageRepository;
 import rnd.staff.repository.StafferRepository;
 
 import java.time.OffsetDateTime;
@@ -13,6 +15,9 @@ public class StafferService {
     @Autowired
     private StafferRepository stafferRepository;
 
+    @Autowired
+    private ImageRepository imageRepository;
+
     public List<Staffer> getAllStaffers(){
         return stafferRepository.findAll();
     }
@@ -22,8 +27,15 @@ public class StafferService {
         return staffer;
     }
 
+    public byte[] findPhotoByUrl(String url){
+        return imageRepository.findOneByUrl(url).getPhoto();
+    }
+
+    public Image postPhoto(Image image){
+        return imageRepository.save(image);
+    }
+
     public Staffer saveStaffer(Staffer staffer){
-        staffer.setDateOfBirth(OffsetDateTime.now());
         return stafferRepository.save(staffer);
     }
 

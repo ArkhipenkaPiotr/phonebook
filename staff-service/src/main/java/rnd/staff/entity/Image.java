@@ -14,6 +14,14 @@ public class Image {
     @Column(columnDefinition = "longblob", nullable = false)
     private byte[] photo;
 
+    public Image() {
+    }
+
+    public Image(String url, byte[] photo) {
+        this.url = url;
+        this.photo = photo;
+    }
+
     public Long getId() {
         return id;
     }

@@ -40,4 +40,14 @@ public class UserController {
     public List<User> getusers(){
         return userRepository.findAll();
     }
+
+    @RequestMapping(value = "/exportToCsv", method = RequestMethod.GET)
+    public String exportToCsv(Principal user) {
+        return userService.exportToCsv(user);
+    }
+
+    @RequestMapping(value = "/importFromCsv", method = RequestMethod.GET)
+    public String importFromCsv(Principal user) {
+        return userService.importFromCsv(user);
+    }
 }
